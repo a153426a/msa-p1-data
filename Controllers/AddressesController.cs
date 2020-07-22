@@ -85,7 +85,7 @@ namespace msa_p1_data.Controllers
         // PUT: api/Addresses/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("ChangeByStudentId/{studentId}/{addressId}")]
+        [HttpPut("ChangeByStudentId")]
         public async Task<IActionResult> PutChangeByStudentId(int studentId, int addressId,Address address)
         {
             var studentExist = new StudentsController(_context).StudentExists(studentId);
@@ -121,7 +121,7 @@ namespace msa_p1_data.Controllers
         // POST: api/Addresses/AddByStudentId
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost("AddByStudentId/{id}")]
+        [HttpPost("AddByStudentId")]
         public async Task<ActionResult<Address>> PostAddByStudentId(int id, Address address)
         {
 
